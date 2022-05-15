@@ -1,0 +1,21 @@
+<section class="classComponent">
+  <div class="card" *ngFor="let card of myCard">
+    <div class="title">
+      <div class="image">
+        <img [src]="card.return.images.url" alt="card.return.title" />
+      </div>
+    </div>
+    <div class="body">
+      <div class="title-description">
+        <h1>{{ card.return.title }}</h1>
+        <p>({{ card.return.programType }})</p>
+        <div class="description">
+          <p>{{ card.return.description }}</p>
+        </div>
+      </div>
+      <div class="foot">
+        <h3>{{ card.return.releaseYear }}</h3>
+      </div>
+    </div>
+  </div>
+</section>

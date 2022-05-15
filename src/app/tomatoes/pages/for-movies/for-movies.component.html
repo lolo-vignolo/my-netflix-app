@@ -1,0 +1,40 @@
+<div class="main-container">
+  <div class="selector">
+    <a routerLink="/movie" routerLinkActive="activeButton">
+      Movies <img class="icon" src="/assets/icon-movies.png" />
+    </a>
+    <a routerLink="/series" routerLinkActive="activeButton">
+      Series <img class="icon" src="/assets/icon-series.png" />
+    </a>
+  </div>
+  <app-search (enter)="enterSearch($event)"></app-search>
+
+  <div class="pagination">
+    <button class="arrows" (click)="backPage()">Back</button>
+    <img src="/assets/icon-filter.png" />
+    <button class="arrows" (click)="nextPage()">Next</button>
+  </div>
+  <div class="list-pictures">
+    <ul>
+      <li
+        class="body-img"
+        *ngFor="let movie of movieSelected | filtro: startPage:find"
+      >
+        <div class="container">
+          <div class="img-content">
+            <img [src]="movie.return.images.url" />
+            <div class="texto">
+              <button [routerLink]="['', movie.return.title]">
+                See more ...
+              </button>
+              <h4>{{ movie.return.title }}</h4>
+              <h6>({{ movie.return.programType }})</h6>
+              <p>{{ movie.return.releaseYear }}</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+>

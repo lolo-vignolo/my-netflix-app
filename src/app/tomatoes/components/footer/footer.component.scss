@@ -1,0 +1,46 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  color: white;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  position: relative;
+
+  margin-bottom: 0.5rem;
+}
+
+.logo-img {
+  width: 50%;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .logo-img {
+    width: 12rem;
+  }
+  img {
+    width: 100px;
+    margin-bottom: 1rem;
+    margin-left: 0.3rem;
+  }
+}

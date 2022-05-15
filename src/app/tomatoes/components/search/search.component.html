@@ -1,0 +1,18 @@
+<div class="search">
+  <div class="inputButton">
+    <input
+      type="text"
+      name="termino"
+      placeholder="Search..."
+      (keyup)="change(txtSearch.value)"
+      #txtSearch
+    />
+    <button (click)="lastView()">Save</button>
+  </div>
+  <div class="list">
+    <h4>
+      Saved:
+      <a *ngFor="let film of history" href="#">"{{ film | titlecase }}"</a>
+    </h4>
+  </div>
+</div>
