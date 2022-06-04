@@ -105,3 +105,4 @@ Aditional data: 📣
 **Thank you so much, I hope this like you**
 
 _Regards_
+# cloneNetflix---Angular
